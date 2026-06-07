@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="calculator">
+
+        <h2>Calculator</h2>
+
+        <input type="number" id="num1" placeholder="First Number">
+
+        <select id="operation">
+            <option value="+">+</option>
+            <option value="-">−</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+
+        <input type="number" id="num2" placeholder="Second Number">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div id="result">Result: </div>
+
+    </div>
+
+    <div class="history">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
